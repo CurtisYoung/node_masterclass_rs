@@ -2,15 +2,20 @@ const ul = document.querySelector("ul")
 const input = document.querySelector("input")
 const form = document.querySelector('form')
 
-
 async function load() {
     const res = await fetch("http://localhost:3000/").then((data) => data.json())
-    
-    res.urls.map(({name, url}) => addElement({name, url}))
+    res.urls.map(({ name, url }) => addElement({ name, url }))
 }
 
 load()
 
+async function add(name, url) {
+    await fetch(`http://localhost:3000/?name=${name}&url=${url}`).then((data) => data.json())
+}
+
+async function drop(name, url, index) {
+    await fetch(`http://localhost:3000/?name=${name}&url=${url}&del=${index}`).then((data) => data.json())
+}
 
 function addElement({ name, url }) {
     const li = document.createElement('li')
@@ -30,8 +35,14 @@ function addElement({ name, url }) {
 }
 
 function removeElement(el) {
-    if (confirm('Tem certeza que deseja deletar?'))
+    if (confirm('Tem certeza que deseja deletar?')){
         el.parentNode.remove()
+
+        const { text, origin } = el.parentNode.firstChild
+        drop(text, origin, '1')
+        
+    }
+        
 }
 
 form.addEventListener("submit", (event) => {
@@ -51,6 +62,8 @@ form.addEventListener("submit", (event) => {
         return alert("Digite a url da maneira correta")
 
     addElement({ name, url })
+    
+    add(name, url)
 
     input.value = ""
 })
