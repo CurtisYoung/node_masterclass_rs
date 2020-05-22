@@ -1,7 +1,7 @@
 
 
 
- <h1 align="center"><img src="/infoAssets/JS/es6.svg" width="40 heigth="40>  Node Masterclass   <img src="/infoAssets/JS/icons8_javascript_7.svg" width="40 heigth="40> </h1>
+ <h1 align="center"> Node Masterclass   <img src="/infoAssets/Node/icons8_nodejs_1.svg" width="40 heigth="40> </h1>
 
  <p align="center"><br><h3>Repositório para repassar e aprimorar e repassar o básico de NodeJS com a visão do pessoal da RocketSeat.</h3><br>
  <p align="center"><br><h3>Criamos uma API para adicionar repositórios em uma listagem para lembrar.</h3><br>
@@ -40,12 +40,12 @@ $ npm start
 ```
 ## :abc: Dependencias:
 <ul>
-    <li><b>nodemon</b></li>
+ <li><a href="https://www.npmjs.com/package/nodemon"target="_blank"><b>nodemon</b></a></li>
 </ul>
  
 
 ---------------------------------------------------------------------------------------
-**&copy;  [Rocketseat](https://rocketseat.com.br/)**  :rocket:
+<span><img src="/infoAssets/RS.png">   **&copy;  [Rocketseat](https://rocketseat.com.br/)**  :rocket: </span>
 
 <h4 align="center">  <a href="https://github.com/CurtisYoung" target="_blank"> Curtis Young</a> </h4>
 
